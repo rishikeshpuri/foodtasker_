@@ -1,0 +1,13 @@
+{% extends 'base_signup.html' %}
+
+{% block title %} Sign In {% endblock %}
+
+{% block heading %}Restaurant - Sign In{% endblock %}
+
+{% block content %}
+  <form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Sign In</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base_signup.html' %}
+
+{% block title %} Sign In {% endblock %}
+
+{% block heading %}Restaurant - Sign In{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{user_form}}
+  {{restaurant_form}}
+  <button type="submit">Sign Up</button>
+  </form>
+{% endblock %}
